@@ -48,11 +48,18 @@
 
   <!-- ナビゲーションバー -->
   <nav>
-    <a href="#top">Top</a>
-    <a href="#about">About</a>
-    <a href="your_pdf.pdf" target="_blank">PDF</a>
-    <a href="#projects">Projects</a>
+    <button onclick="showSection('top')">Top</button>
+    <button onclick="showSection('about')">About</button>
+    <button onclick="showSection('projects')">Projects</button>
   </nav>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(sec => sec.style.display = "none"); // 全部隠す
+      document.getElementById(id).style.display = "block"; // 指定だけ表示
+    }
+  </script>
 
   <!-- アイコン付きリンク -->
   <div class="links">
