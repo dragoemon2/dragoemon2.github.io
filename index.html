@@ -15,16 +15,37 @@
 
     nav {
       background-color: #2c3e50;
-      padding: 1rem;
       display: flex;
       justify-content: center;
-      gap: 2rem;
+      gap: 1rem;
+      padding: 1rem;
     }
 
-    nav a {
+    nav button {
+      background-color: transparent;
+      border: none;
       color: white;
-      text-decoration: none;
-      font-weight: bold;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s, color 0.3s;
+    }
+
+    nav button:hover {
+      color: #1abc9c;
+      border-bottom: 2px solid #1abc9c;
+    }
+
+    section {
+      display: none;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    section.active {
+      display: block;
     }
 
     .links {
@@ -50,6 +71,7 @@
   <nav>
     <button onclick="showSection('top')">Top</button>
     <button onclick="showSection('about')">About</button>
+    <button onclick="showSection('pdf')">PDF</button>
     <button onclick="showSection('projects')">Projects</button>
   </nav>
 
@@ -73,13 +95,12 @@
 
   <!-- Top セクション -->
   <section id="top">
-    <h1>松岡 龍之介</h1>
+    <h1>dragoemon</h1>
     <p>慶應義塾大学 理工学部数理科学科</p>
   </section>
 
   <!-- About セクション -->
   <section id="about" style="display: none;">
-    <h1>松岡 龍之介</h1>
     <p>組合せ数学をやってます</p>
   </section>
 
